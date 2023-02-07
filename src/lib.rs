@@ -65,7 +65,7 @@ impl Wallet {
     }
 
     pub async fn sync(&self) -> Promise {
-        let esplora_url = "https://explorer.bc-2.jp/api";
+        let esplora_url = "https://blockstream.info/testnet/api/";
         let blockchain = EsploraBlockchain::new(esplora_url, 20);
         let wallet = Rc::clone(&self.wallet);
         future_to_promise(async move { wallet.sync(&blockchain, SyncOptions::default()).await.map(|_| JsValue::null()).map_err(|e| e.to_string().into()) })
