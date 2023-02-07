@@ -1,0 +1,18 @@
+[package]
+name = "nodejs-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bdk = { version = "0.26", default-features = false, features = ["all-keys", "use-esplora-reqwest", "reqwest-default-tls", "async-interface", "dev-getrandom-wasm"] }
+wasm-bindgen = { version = "=0.2.83", features = ["serde-serialize"] }
+wasm-bindgen-futures = { version = "0.4" }
+js-sys = "=0.3.56"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
