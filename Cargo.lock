@@ -33,7 +33,9 @@ checksum = "a4a4ddaa51a5bc52a6948f74c06d20aaaddb71924eab79b8c97a8c556e942d6a"
 
 [[package]]
 name = "bdk"
-version = "0.25.0"
+version = "0.26.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b238a07736baee43ba9663933e44b1c6c27b43ef871b9486e175902335d83880"
 dependencies = [
  "async-trait",
  "bdk-macros",
@@ -171,9 +173,9 @@ dependencies = [
 
 [[package]]
 name = "esplora-client"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4b94400573de17e346ab91ec08ad13d37e871e400b9930d4cb2b6b02253e760e"
+checksum = "38bbba572d03ca4d628b653f01e60ba6947c67df65ee8910c79daaf252897924"
 dependencies = [
  "bitcoin",
  "log",

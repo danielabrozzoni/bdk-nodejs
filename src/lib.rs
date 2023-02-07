@@ -17,6 +17,8 @@ use wasm_bindgen_futures::future_to_promise;
 
 #[wasm_bindgen]
 pub struct Wallet {
+    // Rc is not thread safe, if you need thread safety use
+    // Arc<Mutex<
     wallet: Rc<bdk::Wallet<MemoryDatabase>>,
 }
 
